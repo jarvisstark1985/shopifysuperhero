@@ -667,7 +667,7 @@
             </div>
 
             <p style="margin-top: 30px; color: #9ca3af; font-size: 1rem;">
-                <span style="color: var(--neon-green); font-weight: 600;">Simple pricing. No setup fees.</span> Start at just <span style="color: var(--electric-blue); font-weight: 700;">$7/month</span>
+                <span style="color: var(--neon-green); font-weight: 600;">Simple pricing. No setup fees.</span> Just <span style="color: var(--electric-blue); font-weight: 700;">$14.99/month</span>
             </p>
             <p style="margin-top: 12px; color: #6b7280; font-size: 0.9rem;">
                 MCP-compatible • Payment processing by Stripe • API uptime: 99.9%
@@ -729,52 +729,22 @@
             <p style="text-align: center; color: #9ca3af; margin-bottom: 40px; font-size: 1.1rem;">
                 Start integrating immediately. No setup fees. No credit card required for trial. Scale as you grow.
             </p>
-            <div class="pricing-grid">
-                <!-- Starter -->
-                <div class="pricing-card">
-                    <h3>Starter</h3>
-                    <div class="price">$7</div>
-                    <div class="price-period">per month • billed monthly</div>
-                    <ul class="features-list">
-                        <li>Resume SuperHero API access</li>
-                        <li>100 API calls/month</li>
-                        <li>Basic job search integration</li>
-                        <li>Community support</li>
-                        <li>Standard API rate limits</li>
-                    </ul>
-                    <a href="https://buy.stripe.com/starter" class="btn-primary" target="_blank" style="font-weight: 600; font-size: 1rem;">Start Free Trial</a>
-                </div>
-
-                <!-- Pro (Featured) -->
+            <div style="max-width: 480px; margin: 0 auto;">
                 <div class="pricing-card featured">
-                    <h3>Pro</h3>
+                    <h3>All-Access Pass</h3>
                     <div class="price">$14.99</div>
-                    <div class="price-period">per month • billed monthly</div>
+                    <div class="price-period">per month • auto-billed monthly</div>
                     <ul class="features-list">
-                        <li>Full API access (all services)</li>
+                        <li>Full API access to all SuperHero services</li>
                         <li>1,000 API calls/month</li>
+                        <li>MCP integration & analytics dashboard</li>
                         <li>Priority support</li>
-                        <li>Advanced integrations</li>
-                        <li>Custom webhooks</li>
+                        <li>Custom webhooks & advanced integrations</li>
                         <li>Performance analytics</li>
+                        <li>Direct consumer reach to 20M+ AI agents</li>
                     </ul>
-                    <a href="https://buy.stripe.com/pro" class="btn-primary" target="_blank" style="font-weight: 600; font-size: 1rem; background: linear-gradient(135deg, var(--electric-blue), var(--accent-purple));">Subscribe Now & Get Started</a>
-                </div>
-
-                <!-- Enterprise -->
-                <div class="pricing-card">
-                    <h3>Enterprise</h3>
-                    <div class="price">$19.99</div>
-                    <div class="price-period">per month • unlimited</div>
-                    <ul class="features-list">
-                        <li>Unlimited API calls</li>
-                        <li>White-label solutions</li>
-                        <li>Dedicated API endpoints</li>
-                        <li>Custom integrations</li>
-                        <li>24/7 priority support</li>
-                        <li>SLA guarantee (99.99%)</li>
-                    </ul>
-                    <a href="https://buy.stripe.com/enterprise" class="btn-primary" target="_blank" style="font-weight: 600; font-size: 1rem;">Get Enterprise Access</a>
+                    <a href="https://buy.stripe.com/shopifysuperhero-pro" class="btn-primary" target="_blank" style="font-weight: 600; font-size: 1.1rem; background: linear-gradient(135deg, var(--electric-blue), var(--accent-purple)); padding: 16px 40px;">Subscribe Now</a>
+                    <p style="margin-top: 16px; color: #6b7280; font-size: 0.85rem;">Cancel anytime. No setup fees. Billed by TheAISuperHeroes.</p>
                 </div>
             </div>
         </div>
@@ -795,7 +765,7 @@
   -d '{
     "agent_id": "claude-ai-agent-123",
     "model": "claude-opus",
-    "tier": "pro",
+    "tier": "all-access",
     "callback_url": "mcp://your-agent.local/webhooks"
   }'
                 </div>
@@ -815,18 +785,10 @@ GET  /v1/jobs/search?keywords=...
 POST /v1/rank/analyze</div>
 
                 <h3 style="color: #fbbf24; font-size: 1.3rem; margin-bottom: 20px; margin-top: 40px;">Rate Limits & Quotas</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
-                    <div style="background: rgba(0, 212, 255, 0.1); border-left: 4px solid var(--electric-blue); padding: 16px; border-radius: 8px;">
-                        <div style="color: var(--electric-blue); font-weight: 700;">Starter</div>
-                        <div style="color: #9ca3af; font-size: 0.9rem; margin-top: 8px;">100 calls/month<br>10 req/sec</div>
-                    </div>
+                <div style="display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 20px; max-width: 400px;">
                     <div style="background: rgba(0, 255, 136, 0.1); border-left: 4px solid var(--neon-green); padding: 16px; border-radius: 8px;">
-                        <div style="color: var(--neon-green); font-weight: 700;">Pro</div>
-                        <div style="color: #9ca3af; font-size: 0.9rem; margin-top: 8px;">1,000 calls/month<br>50 req/sec</div>
-                    </div>
-                    <div style="background: rgba(251, 191, 36, 0.1); border-left: 4px solid var(--gold); padding: 16px; border-radius: 8px;">
-                        <div style="color: var(--gold); font-weight: 700;">Enterprise</div>
-                        <div style="color: #9ca3af; font-size: 0.9rem; margin-top: 8px;">Unlimited<br>500 req/sec</div>
+                        <div style="color: var(--neon-green); font-weight: 700;">All-Access Pass — $14.99/mo</div>
+                        <div style="color: #9ca3af; font-size: 0.9rem; margin-top: 8px;">1,000 calls/month<br>50 req/sec<br>Full API access to all services</div>
                     </div>
                 </div>
             </div>
@@ -873,22 +835,22 @@ POST /v1/rank/analyze</div>
 
                 <div class="faq-item">
                     <div class="faq-question">What is your API uptime SLA?</div>
-                    <div class="faq-answer">We guarantee 99.9% uptime across all tiers. Enterprise customers receive 99.99% SLA with automatic failover and dedicated support channels. We publish real-time status at status.shopifysuperhero.com.</div>
+                    <div class="faq-answer">We guarantee 99.9% uptime for all subscribers. All-Access Pass members receive priority support and automatic failover. We publish real-time status at status.shopifysuperhero.com.</div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">Can I integrate Resume SuperHero into my own application?</div>
-                    <div class="faq-answer">Absolutely. Our API is fully documented and supports REST and MCP protocols. White-label solutions are available for Enterprise tier subscribers. Contact our API team for integration guidance.</div>
+                    <div class="faq-answer">Absolutely. Our API is fully documented and supports REST and MCP protocols. White-label solutions are available for All-Access Pass subscribers. Contact our API team for integration guidance.</div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">What happens if I exceed my monthly API quota?</div>
-                    <div class="faq-answer">You'll be notified via webhook. You can immediately upgrade your tier, or requests will be throttled (202 Accepted responses). No surprise charges—we're transparent about usage.</div>
+                    <div class="faq-answer">You'll be notified via webhook. Requests beyond your quota will be throttled (202 Accepted responses). No surprise charges—we're transparent about usage.</div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">Is there a free tier?</div>
-                    <div class="faq-answer">We offer a 7-day free trial on the Starter tier (100 calls/month equivalent). No credit card required. After trial, choose your subscription or cancel anytime.</div>
+                    <div class="faq-question">Is there a free trial?</div>
+                    <div class="faq-answer">We offer a 7-day free trial with full API access. No credit card required. After the trial, subscribe to the All-Access Pass at $14.99/mo or cancel anytime.</div>
                 </div>
 
                 <div class="faq-item">
@@ -903,7 +865,7 @@ POST /v1/rank/analyze</div>
 
                 <div class="faq-item">
                     <div class="faq-question">What payment methods do you accept?</div>
-                    <div class="faq-answer">Stripe processes all payments. We accept all major credit cards, Apple Pay, Google Pay, and ACH transfers for Enterprise customers. Billing is fully automated and can be paused or canceled instantly.</div>
+                    <div class="faq-answer">Stripe processes all payments. We accept all major credit cards, Apple Pay, and Google Pay. Billing is fully automated at $14.99/mo and can be paused or canceled instantly.</div>
                 </div>
             </div>
         </div>
@@ -969,9 +931,9 @@ POST /v1/rank/analyze</div>
       "operatingSystem": "Cloud-based",
       "offers": {
         "@type": "Offer",
-        "price": "7.00",
+        "price": "14.99",
         "priceCurrency": "USD",
-        "description": "Starter tier"
+        "description": "All-Access Pass — monthly subscription"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -1016,17 +978,9 @@ POST /v1/rank/analyze</div>
         }
       },
       "rate_limits": {
-        "starter": {
-          "calls_per_month": 100,
-          "requests_per_second": 10
-        },
-        "pro": {
+        "all_access": {
           "calls_per_month": 1000,
           "requests_per_second": 50
-        },
-        "enterprise": {
-          "calls_per_month": "unlimited",
-          "requests_per_second": 500
         }
       },
       "uptime_sla": "99.9%",

@@ -110,7 +110,7 @@ async function doLogin(){
     const r=await fetch(API+'/api/auth/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,password:pass})});
     const d=await r.json();
     if(!r.ok)return showMsg('authMsg',d.error||'Login failed','err');
-    token=d.token;user=d.user;sessionStorage.setItem(SK,token);sessionStorage.setItem(SU,JSON.stringify(user));checkAuth();
+    token=d.token;user=d.user||{email:d.email,subscription_status:'active'};sessionStorage.setItem(SK,token);sessionStorage.setItem(SU,JSON.stringify(user));checkAuth();
   }catch(e){showMsg('authMsg','Connection error. Please try again.','err')}
 }
 
@@ -122,7 +122,7 @@ async function doRegister(){
     const r=await fetch(API+'/api/auth/register',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,password:pass})});
     const d=await r.json();
     if(!r.ok)return showMsg('authMsg',d.error||'Registration failed','err');
-    token=d.token;user=d.user;sessionStorage.setItem(SK,token);sessionStorage.setItem(SU,JSON.stringify(user));checkAuth();
+    token=d.token;user=d.user||{email:d.email,subscription_status:'active'};sessionStorage.setItem(SK,token);sessionStorage.setItem(SU,JSON.stringify(user));checkAuth();
   }catch(e){showMsg('authMsg','Connection error. Please try again.','err')}
 }
 

@@ -3,25 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopifySuperHero - AI Agent Marketplace Platform</title>
-    <meta name="description" content="AI Agent Marketplace Platform. Discover premium services, connect through advanced integrations, and scale. $14.99/mo.">
+    <meta name="description" content="Shopify SuperHero: AI Agent Marketplace for Shopify store owners. Automate marketing, customer service, inventory, and analytics with AI agents. $14.99/month. Trusted by 8,000+ merchants.">
+    <meta name="keywords" content="Shopify AI agents, marketing automation, customer service, inventory management, analytics">
+    <meta property="og:title" content="Shopify SuperHero — AI Agent Marketplace for Your Store">
+    <meta property="og:description" content="Connect your Shopify store to a network of AI agents that automate everything. 40M+ consumer reach.">
+    <meta property="og:image" content="https://shopifysuperhero.com/og-image.png">
+    <meta property="og:url" content="https://shopifysuperhero.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#FF6B35">
+
+    <title>Shopify SuperHero — AI Agent Marketplace for Store Owners</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RVV7C7Y5YY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-RVV7C7Y5YY');
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -30,682 +26,1471 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-P2C3KN7T');</script>
 
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "SoftwareApplication",
+      "name": "Shopify SuperHero",
+      "description": "AI Agent Marketplace for Shopify store owners to automate marketing, customer service, inventory, and analytics",
+      "url": "https://shopifysuperhero.com",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "14.99",
+        "priceCurrency": "USD",
+        "url": "https://buy.stripe.com/test_cNa28H2Yp4d50XS3cz"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "8000"
+      }
+    }
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RVV7C7Y5YY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RVV7C7Y5YY');
+    </script>
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --black: #0A0A0A;
+            --card: #141414;
+            --card-border: rgba(255,255,255,0.06);
+            --orange: #FF6B35;
+            --yellow: #FFD93D;
+            --blue: #4ECDC4;
+            --red: #FF4444;
+            --purple: #6C63FF;
+            --teal: #4ECDC4;
+            --pink: #E97698;
+            --white: #FFFFFF;
+            --gray: #888;
+            --light-gray: #B0B0B0;
+            --max-w: 1400px;
         }
+
+        html { scroll-behavior: smooth; }
 
         body {
-            background-color: #0f172a;
-            color: rgb(226, 232, 240);
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', -apple-system, system-ui, sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 700;
-        }
+        a { color: inherit; text-decoration: none; }
 
-        .hero-gradient {
-            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+        /* ── Announcement Bar ── */
+        .announce {
+            background: var(--black);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 0.85rem;
+            color: var(--light-gray);
         }
-
-        .hero-glow {
-            background:
-                radial-gradient(ellipse at 60% 50%, rgba(124,58,237,0.25) 0%, transparent 70%),
-                radial-gradient(ellipse at 20% 80%, rgba(37,99,235,0.2) 0%, transparent 60%);
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            pointer-events: none;
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #fbbf24 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-            color: white;
-            border-radius: 12px;
-            padding: 12px 24px;
+        .announce a {
+            color: var(--orange);
             font-weight: 600;
-            font-size: 14px;
+            margin-left: 6px;
+        }
+        .announce a:hover { text-decoration: underline; }
+
+        /* ── Navigation ── */
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 40px;
+            max-width: var(--max-w);
+            margin: 0 auto;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10,10,10,0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+        .logo svg { width: 28px; height: 28px; }
+        .logo .brand-italic {
+            font-style: italic;
+            color: var(--orange);
+        }
+
+        .nav-pill {
+            display: flex;
+            gap: 0;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 999px;
+            padding: 4px;
+        }
+        .nav-pill a {
+            padding: 8px 20px;
+            font-size: 0.88rem;
+            color: var(--light-gray);
+            border-radius: 999px;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+        .nav-pill a:hover {
+            color: var(--white);
+            background: rgba(255,255,255,0.08);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .nav-right .login {
+            color: var(--light-gray);
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .nav-right .login:hover { color: var(--white); }
+
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--white);
+            color: var(--black);
+            padding: 10px 24px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.9rem;
             border: none;
             cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
+            transition: all 0.25s;
+        }
+        .btn-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 24px rgba(255,255,255,0.15);
         }
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+        .btn-cta-accent {
+            background: linear-gradient(135deg, var(--orange), #FF8855);
+            color: var(--white);
+        }
+        .btn-cta-accent:hover {
+            box-shadow: 0 8px 24px rgba(255,107,53,0.35);
         }
 
-        .btn-secondary {
-            background: rgba(16, 185, 129, 0.15);
-            border: 1px solid rgba(16, 185, 129, 0.4);
-            color: #6ee7b7;
-            border-radius: 12px;
-            padding: 12px 24px;
-            font-weight: 600;
-            font-size: 14px;
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
             cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
         }
 
-        .btn-secondary:hover {
-            background: rgba(16, 185, 129, 0.25);
-            transform: translateY(-2px);
+        /* ── Hero ── */
+        .hero {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding: 80px 40px 60px;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
+            min-height: 85vh;
         }
 
-        .card {
-            background: rgba(30, 41, 59, 0.9);
-            border: 1px solid rgba(124, 58, 237, 0.3);
+        .hero-left {}
+
+        .social-proof {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+        .avatars {
+            display: flex;
+        }
+        .av {
+            width: 32px; height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 700;
+            margin-left: -8px;
+            border: 2px solid var(--black);
+        }
+        .av:first-child { margin-left: 0; }
+        .av-1 { background: var(--teal); color: var(--black); }
+        .av-2 { background: var(--purple); color: var(--black); }
+        .av-3 { background: var(--pink); color: var(--black); }
+
+        .proof-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .proof-stars { color: var(--yellow); font-size: 0.75rem; letter-spacing: 1px; }
+        .proof-text {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gray);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            margin-bottom: 28px;
+        }
+        .hero h1 em {
+            font-style: italic;
+            color: var(--orange);
+            text-decoration: underline;
+            text-decoration-color: rgba(255,107,53,0.3);
+            text-underline-offset: 6px;
+        }
+
+        .hero-sub {
+            font-size: 1.1rem;
+            color: var(--gray);
+            max-width: 480px;
+            line-height: 1.7;
+            margin-bottom: 36px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: transparent;
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.15);
+            cursor: pointer;
+            transition: all 0.25s;
+        }
+        .btn-outline:hover {
+            border-color: var(--white);
+            background: rgba(255,255,255,0.05);
+        }
+
+        /* ── Hero Right: Floating UI Cards ── */
+        .hero-right {
+            position: relative;
+            height: 520px;
+        }
+
+        .mock-dashboard {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: -20px;
+            bottom: 0;
+            background: var(--card);
+            border: 1px solid var(--card-border);
             border-radius: 16px;
-            padding: 24px;
-            transition: all 0.3s ease;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+        .mock-topbar {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--card-border);
+        }
+        .mock-dot {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+        }
+        .mock-dot-r { background: #FF5F57; }
+        .mock-dot-y { background: #FFBD2E; }
+        .mock-dot-g { background: #28CA41; }
+        .mock-label {
+            margin-left: 12px;
+            font-size: 0.75rem;
+            color: var(--gray);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .mock-body {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            height: calc(100% - 42px);
+        }
+        .mock-sidebar {
+            border-right: 1px solid var(--card-border);
+            padding: 16px 12px;
+        }
+        .mock-sidebar-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 10px;
+            border-radius: 8px;
+            font-size: 0.78rem;
+            color: var(--gray);
+            margin-bottom: 2px;
+            cursor: default;
+        }
+        .mock-sidebar-item.active {
+            background: rgba(244,248,114,0.1);
+            color: var(--orange);
+        }
+        .mock-sidebar-item .dot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: currentColor;
+        }
+        .mock-main {
+            padding: 20px;
+        }
+        .mock-stat-row {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .mock-stat {
+            flex: 1;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            padding: 14px;
+        }
+        .mock-stat-label {
+            font-size: 0.7rem;
+            color: var(--gray);
+            margin-bottom: 6px;
+        }
+        .mock-stat-value {
+            font-size: 1.4rem;
+            font-weight: 800;
+        }
+        .mock-stat-value.yellow { color: var(--orange); }
+        .mock-stat-value.teal { color: var(--teal); }
+        .mock-stat-value.purple { color: var(--purple); }
+
+        /* Floating notification badges */
+        .float-badge {
+            position: absolute;
+            padding: 10px 16px;
+            border-radius: 12px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+            z-index: 10;
+            backdrop-filter: blur(10px);
+            animation: float-slow 6s ease-in-out infinite;
+        }
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
         }
 
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 60px rgba(124, 58, 237, 0.25);
+        .badge-score {
+            top: 10px;
+            right: 20px;
+            background: rgba(174,235,228,0.15);
+            border: 1px solid rgba(174,235,228,0.3);
+            color: var(--teal);
+            animation-delay: 0s;
+        }
+        .badge-score .big { font-size: 1.6rem; font-weight: 800; display: block; }
+
+        .badge-match {
+            top: 0;
+            left: -10px;
+            background: rgba(244,248,114,0.15);
+            border: 1px solid rgba(244,248,114,0.3);
+            color: var(--orange);
+            animation-delay: 1s;
+        }
+        .badge-match .tag {
+            display: inline-block;
+            background: var(--orange);
+            color: var(--black);
+            font-size: 0.65rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            letter-spacing: 0.5px;
         }
 
-        .nav-border {
-            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+        .badge-ats {
+            bottom: 20px;
+            right: -10px;
+            background: rgba(179,168,238,0.15);
+            border: 1px solid rgba(179,168,238,0.3);
+            color: var(--purple);
+            animation-delay: 2s;
         }
 
-        .icon-gradient {
-            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%);
+        /* ── Section Shared ── */
+        .section {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        .section-label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gray);
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 3.5vw, 3rem);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+            max-width: 700px;
+        }
+        .section-title em {
+            font-style: italic;
+            color: var(--orange);
+        }
+
+        .section-desc {
+            font-size: 1.05rem;
+            color: var(--gray);
+            max-width: 600px;
+            line-height: 1.7;
+            margin-bottom: 48px;
+        }
+
+        /* ── Features Grid ── */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .f-card {
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 32px 24px;
+            transition: all 0.3s;
+        }
+        .f-card:hover {
+            border-color: rgba(255,255,255,0.12);
+            box-shadow: 0 8px 32px rgba(255,107,53,0.1);
+        }
+
+        .f-icon {
+            width: 56px;
+            height: 56px;
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 48px;
-            height: 48px;
+            margin-bottom: 16px;
+        }
+
+        .f-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .f-card p {
+            font-size: 0.95rem;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        /* ── Workflow ── */
+        .workflow-step {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 80px;
+            align-items: center;
+        }
+        .workflow-step.reverse {
+            direction: rtl;
+        }
+        .workflow-step.reverse > * {
+            direction: ltr;
+        }
+
+        .wf-text {}
+        .wf-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px; height: 36px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .wf-number.yellow { background: rgba(244,248,114,0.15); color: var(--orange); }
+        .wf-number.teal { background: rgba(174,235,228,0.15); color: var(--teal); }
+        .wf-number.purple { background: rgba(179,168,238,0.15); color: var(--purple); }
+        .wf-number.pink { background: rgba(233,118,152,0.15); color: var(--pink); }
+
+        .wf-text h3 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+        .wf-text p {
+            font-size: 1rem;
+            color: var(--gray);
+            line-height: 1.7;
+            max-width: 440px;
+        }
+
+        .wf-visual {
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 32px;
+            min-height: 240px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .wf-visual-inner {
+            text-align: center;
+            color: var(--gray);
+        }
+        .wf-visual-inner .big-icon {
+            font-size: 3rem;
+            margin-bottom: 12px;
+        }
+        .wf-visual-inner p {
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        /* ── Testimonials ── */
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .t-card {
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 28px;
+        }
+
+        .t-stars {
+            color: var(--yellow);
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            margin-bottom: 14px;
+        }
+
+        .t-quote {
+            font-size: 0.95rem;
+            color: var(--gray);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .t-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .t-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 700;
             flex-shrink: 0;
         }
 
-        .pill-badge {
-            background: rgba(124, 58, 237, 0.1);
-            border: 1px solid rgba(124, 58, 237, 0.3);
-            border-radius: 20px;
-            padding: 8px 16px;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 13px;
-            color: rgb(226, 232, 240);
-        }
-
-        .green-dot {
-            width: 8px;
-            height: 8px;
-            background: #10b981;
-            border-radius: 50%;
-        }
-
-        .accordion-button {
-            background: transparent;
-            border: 1px solid rgba(124, 58, 237, 0.2);
-            border-radius: 12px;
-            padding: 16px;
-            width: 100%;
-            text-align: left;
-            color: rgb(226, 232, 240);
+        .t-info h4 {
+            font-size: 0.95rem;
             font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            margin-bottom: 2px;
+        }
+
+        .t-info span {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        /* ── Pricing ── */
+        .pricing-center {
+            text-align: center;
+        }
+
+        .price-card {
+            background: var(--card);
+            border: 2px solid var(--orange);
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .price-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--orange);
+            color: var(--black);
+            padding: 4px 16px;
+            border-radius: 999px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .price-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .price-amount {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--orange);
+            margin-bottom: 2px;
+        }
+
+        .price-period {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 28px;
+        }
+
+        .price-features {
+            list-style: none;
+            margin-bottom: 28px;
+            text-align: left;
+        }
+
+        .price-features li {
+            padding: 10px 0;
+            color: var(--gray);
+            font-size: 0.95rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .price-features li:last-child {
+            border-bottom: none;
+        }
+
+        .price-cta {
+            width: 100%;
+            margin-bottom: 12px;
+        }
+
+        .price-note {
+            font-size: 0.75rem;
+            color: var(--gray);
+        }
+
+        /* ── Referral ── */
+        .referral {
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 48px;
+            text-align: center;
+        }
+
+        .ref-badge {
+            display: inline-block;
+            background: rgba(255,107,53,0.15);
+            color: var(--orange);
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .ref-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .ref-title em {
+            font-style: italic;
+            color: var(--orange);
+        }
+
+        .ref-desc {
+            font-size: 1rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto 32px;
+            line-height: 1.7;
+        }
+
+        .ref-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-bottom: 32px;
+        }
+
+        .ref-stat {
+            text-align: center;
+        }
+
+        .ref-stat-val {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--orange);
+        }
+
+        .ref-stat-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-top: 8px;
+        }
+
+        /* ── FAQ ── */
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .faq-q {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            user-select: none;
         }
 
-        .accordion-button:hover {
-            border-color: rgba(124, 58, 237, 0.4);
+        .faq-q:hover {
+            background: rgba(255,255,255,0.02);
         }
 
-        .accordion-button.active {
-            background: rgba(124, 58, 237, 0.1);
-            border-color: rgba(124, 58, 237, 0.4);
+        .faq-q span:first-child {
+            font-weight: 600;
+            font-size: 0.95rem;
         }
 
-        .accordion-content {
+        .faq-q .arrow {
+            transition: transform 0.3s;
+            color: var(--gray);
+        }
+
+        .faq-item.open .faq-q .arrow {
+            transform: rotate(180deg);
+        }
+
+        .faq-a {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease;
-            background: rgba(124, 58, 237, 0.05);
-            border-radius: 0 0 12px 12px;
-            border: 1px solid rgba(124, 58, 237, 0.2);
-            border-top: none;
-            padding: 0;
+            transition: max-height 0.3s;
         }
 
-        .accordion-content.active {
+        .faq-item.open .faq-a {
             max-height: 500px;
-            padding: 16px;
+        }
+
+        .faq-a-inner {
+            padding: 0 20px 20px;
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* ── Final CTA ── */
+        .final-cta {
+            text-align: center;
+            padding: 80px 40px;
+            max-width: var(--max-w);
+            margin: 0 auto;
+        }
+
+        .final-cta h2 {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+
+        .final-cta h2 em {
+            font-style: italic;
+            color: var(--orange);
+        }
+
+        .final-cta p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 32px;
+        }
+
+        .final-cta-btns {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ── Footer ── */
+        footer {
+            background: rgba(0,0,0,0.5);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding: 40px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-bottom: 12px;
+        }
+
+        footer a {
+            color: var(--orange);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── Sticky Bottom CTA ── */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10,10,10,0.95);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 99;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .sticky-cta p {
+            font-size: 0.9rem;
+            color: var(--white);
+        }
+
+        .sticky-cta .btn-cta-accent {
+            padding: 8px 20px;
+            font-size: 0.85rem;
+        }
+
+        body.hide-sticky .sticky-cta {
+            display: none;
+        }
+
+        body.sticky-visible {
+            padding-bottom: 60px;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 1024px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 60px 40px 40px;
+            }
+            .hero-right {
+                display: none;
+            }
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .test-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .ref-stats {
+                gap: 40px;
+            }
         }
 
         @media (max-width: 768px) {
-            .hero-layout {
-                flex-direction: column;
+            nav {
+                padding: 12px 20px;
             }
-
-            .hero-mockup {
+            .logo { font-size: 1.1rem; }
+            .logo svg { width: 24px; height: 24px; }
+            .nav-pill {
                 display: none;
+            }
+            .mobile-toggle {
+                display: block;
+            }
+            .nav-right {
+                gap: 12px;
+            }
+            .hero {
+                padding: 40px 20px;
+                min-height: auto;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero-sub {
+                font-size: 0.95rem;
+            }
+            .hero-btns {
+                gap: 8px;
+            }
+            .btn-cta {
+                padding: 8px 16px;
+                font-size: 0.8rem;
+            }
+            .section {
+                padding: 50px 20px;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .section-desc {
+                font-size: 0.95rem;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .test-grid {
+                grid-template-columns: 1fr;
+            }
+            .workflow-step {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                margin-bottom: 50px;
+            }
+            .workflow-step.reverse {
+                direction: ltr;
+            }
+            .price-card {
+                padding: 30px;
+            }
+            .price-amount {
+                font-size: 2.5rem;
+            }
+            .ref-stats {
+                flex-direction: column;
+                gap: 24px;
+            }
+            .final-cta {
+                padding: 50px 20px;
+            }
+            .final-cta h2 {
+                font-size: 1.5rem;
+            }
+            .sticky-cta {
+                flex-direction: column;
+                gap: 12px;
+                padding: 12px;
+            }
+            .sticky-cta p {
+                font-size: 0.8rem;
             }
         }
     </style>
 </head>
+
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2C3KN7T"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <div class="announce">
+        ⚡ AI Agent Marketplace for Shopify Merchants
+    </div>
 
     <!-- Navigation -->
-    <nav class="nav-border sticky top-0 z-50 backdrop-blur-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="url(#grad)" stroke="url(#grad)" stroke-width="2" stroke-linejoin="round"/>
-                    <defs>
-                        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-                <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 400; font-size: 18px;">Shopify</span>
-                <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-style: italic; font-size: 18px;" class="gradient-text">SuperHero</span>
-            </div>
-
-            <div class="hidden md:flex items-center gap-8">
-                <a href="#features" style="color: rgb(226, 232, 240); text-decoration: none; font-size: 14px;">Features</a>
-                <a href="#how-it-works" style="color: rgb(226, 232, 240); text-decoration: none; font-size: 14px;">How It Works</a>
-                <a href="#pricing" style="color: rgb(226, 232, 240); text-decoration: none; font-size: 14px;">Pricing</a>
-                <a href="#faq" style="color: rgb(226, 232, 240); text-decoration: none; font-size: 14px;">FAQ</a>
-                <span style="color: rgb(226, 232, 240); font-size: 14px; cursor: pointer;">Log in</span>
-                <a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="btn-primary">Get Started</a>
-            </div>
+    <nav>
+        <div class="logo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 2l-2 4h10l-2-4M3 6h18M5 10h14l-1 12H6l-1-12"/>
+            </svg>
+            Shopify <span class="brand-italic">SuperHero</span>
         </div>
+
+        <div class="nav-pill">
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
+        </div>
+
+        <div class="nav-right">
+            <span class="login" onclick="alert('Login functionality would be here')">Login</span>
+            <a href="https://buy.stripe.com/test_cNa28H2Yp4d50XS3cz" class="btn-cta btn-cta-accent">Get Started</a>
+        </div>
+
+        <button class="mobile-toggle" onclick="alert('Mobile menu would be here')">☰</button>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-gradient relative overflow-hidden min-h-screen flex items-center">
-        <div class="hero-glow"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full relative z-10">
-            <div class="hero-layout flex gap-12 items-center">
-                <!-- Left Content -->
-                <div class="flex-1 max-w-lg">
-                    <div class="pill-badge mb-6">
-                        <div class="green-dot"></div>
-                        <span>AI Agent Marketplace · $14.99/mo</span>
-                    </div>
-
-                    <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: 48px; line-height: 1.2; margin-bottom: 20px; color: rgb(226, 232, 240);">
-                        AI Agents Discovering Premium Services <span class="gradient-text">At Scale.</span>
-                    </h1>
-
-                    <p style="font-size: 16px; color: rgb(148, 163, 184); margin-bottom: 32px; line-height: 1.6;">
-                        Connect your AI agents through advanced integrations, real-time analytics, and automated scaling. The complete marketplace platform for agent-to-service discovery and performance monitoring.
-                    </p>
-
-                    <div class="flex flex-col sm:flex-row gap-4 mb-12">
-                        <a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="btn-primary text-center">
-                            Get All-Access Pass for $14.99/mo →
-                        </a>
-                        <button class="btn-secondary">
-                            + 1 Month Free Replit
-                        </button>
-                    </div>
-
-                    <!-- Social Proof -->
-                    <div class="flex items-center gap-6">
-                        <div class="flex -space-x-3">
-                            <div style="width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #60a5fa, #a78bfa); border: 2px solid #0f172a;"></div>
-                            <div style="width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #a78bfa, #fbbf24); border: 2px solid #0f172a;"></div>
-                            <div style="width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #fbbf24, #60a5fa); border: 2px solid #0f172a;"></div>
-                        </div>
-                        <div>
-                            <div style="font-weight: 600; font-size: 14px;">8,500+ active agents</div>
-                            <div style="color: rgb(148, 163, 184); font-size: 13px;">★★★★★ 4.9/5</div>
-                        </div>
-                    </div>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-left">
+            <!-- Status Pill -->
+            <div class="social-proof">
+                <div class="proof-meta">
+                    <div class="proof-text">⚡ AI Agent Marketplace · $14.99/mo</div>
                 </div>
+            </div>
 
-                <!-- Right Mockup -->
-                <div class="hero-mockup flex-1 hidden lg:block relative h-96">
-                    <div style="position: absolute; top: 0; right: 0; width: 300px;">
-                        <div class="card mb-4">
-                            <div style="font-size: 12px; color: rgb(148, 163, 184); margin-bottom: 12px;">API Performance / Live Status</div>
-                            <div style="font-size: 24px; font-weight: 700; margin-bottom: 12px;">99.9%</div>
-                            <div style="font-size: 13px; color: rgb(148, 163, 184);">Uptime</div>
-                            <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(124, 58, 237, 0.2);">
-                                <div style="font-size: 13px; color: rgb(148, 163, 184); margin-bottom: 4px;">Calls/Month</div>
-                                <div style="font-size: 20px; font-weight: 700;">1,000</div>
+            <h1>Your store runs on <em>guesswork</em>. Shopify SuperHero runs on <em>AI</em>.</h1>
+
+            <p class="hero-sub">Connect your store to a network of AI agents that automate marketing, customer service, inventory, and analytics. 40M+ consumer reach.</p>
+
+            <div class="hero-btns">
+                <a href="https://buy.stripe.com/test_cNa28H2Yp4d50XS3cz" class="btn-cta btn-cta-accent">Get Started for $14.99/mo →</a>
+                <a href="#features" class="btn-outline">Explore Features</a>
+            </div>
+
+            <div class="social-proof" style="margin-top: 32px;">
+                <div class="avatars">
+                    <div class="av av-1">M1</div>
+                    <div class="av av-2">M2</div>
+                    <div class="av av-3">M3</div>
+                </div>
+                <div class="proof-meta">
+                    <div class="proof-stars">★★★★★</div>
+                    <div class="proof-text">Trusted by 8,000+ Shopify merchants</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard mockup -->
+        <div class="hero-right">
+            <div class="mock-dashboard">
+                <div class="mock-topbar">
+                    <div class="mock-dot mock-dot-r"></div>
+                    <div class="mock-dot mock-dot-y"></div>
+                    <div class="mock-dot mock-dot-g"></div>
+                    <div class="mock-label">Dashboard</div>
+                </div>
+                <div class="mock-body">
+                    <div class="mock-sidebar">
+                        <div class="mock-sidebar-item active">
+                            <div class="dot"></div> Marketing
+                        </div>
+                        <div class="mock-sidebar-item">
+                            <div class="dot"></div> Support
+                        </div>
+                        <div class="mock-sidebar-item">
+                            <div class="dot"></div> Inventory
+                        </div>
+                        <div class="mock-sidebar-item">
+                            <div class="dot"></div> Analytics
+                        </div>
+                    </div>
+                    <div class="mock-main">
+                        <div class="mock-stat-row">
+                            <div class="mock-stat">
+                                <div class="mock-stat-label">Revenue</div>
+                                <div class="mock-stat-value yellow">+47%</div>
                             </div>
-                            <div style="margin-top: 12px; display: inline-block; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 8px; padding: 6px 12px; font-size: 11px; color: #6ee7b7;">All integrations active</div>
+                            <div class="mock-stat">
+                                <div class="mock-stat-label">Conversions</div>
+                                <div class="mock-stat-value teal">8.2%</div>
+                            </div>
                         </div>
-                    </div>
-
-                    <div style="position: absolute; bottom: 0; right: 0; width: 300px;">
-                        <div class="card">
-                            <div style="font-size: 12px; color: rgb(148, 163, 184); margin-bottom: 12px;">Agent Connections · Active</div>
-                            <div style="font-size: 28px; font-weight: 700;">8,547</div>
-                            <div style="font-size: 13px; color: rgb(148, 163, 184);">premium agents online</div>
+                        <div class="mock-stat-row">
+                            <div class="mock-stat">
+                                <div class="mock-stat-label">AI Active</div>
+                                <div class="mock-stat-value purple">6</div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Floating badges -->
+            <div class="float-badge badge-match">
+                <div class="tag">AI AGENTS</div>
+                40M+ Reach
+            </div>
+            <div class="float-badge badge-score">
+                Revenue
+                <div class="big">+47%</div>
+            </div>
+            <div class="float-badge badge-ats">
+                AI Active
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-rgba(124, 58, 237, 0.2)">
-        <div class="max-w-7xl mx-auto">
-            <div style="text-align: center; margin-bottom: 60px;">
-                <h2 style="font-size: 36px; margin-bottom: 16px;">Everything Your Agents Need</h2>
-                <p style="font-size: 16px; color: rgb(148, 163, 184); max-width: 500px; margin: 0 auto;">Enterprise-grade platform built for scalable agent-to-service integration.</p>
+    <!-- Features -->
+    <section class="section" id="features">
+        <div class="section-label">Features</div>
+        <div class="section-title">Everything to <em>automate your store</em></div>
+        <div class="section-desc">Six AI-powered agents working together to optimize every aspect of your Shopify business — from marketing to customer service.</div>
+
+        <div class="features-grid">
+            <div class="f-card">
+                <div class="f-icon" style="background:linear-gradient(135deg,rgba(255,107,53,0.15),rgba(255,217,61,0.15));">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6-6 6 6M6 9v10a2 2 0 002 2h8a2 2 0 002-2V9"/><rect x="9" y="13" width="6" height="4"/></svg>
+                </div>
+                <h3>Marketing Agents</h3>
+                <p>AI agents that write, post, and optimize your marketing campaigns across all channels.</p>
             </div>
-
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24;">
-                <!-- Feature 1: API Access -->
-                <div class="card">
-                    <div class="icon-gradient mb-4">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 8h16v12H6z" stroke="white" stroke-width="2" fill="none"/>
-                            <path d="M2 4h24" stroke="white" stroke-width="2"/>
-                            <circle cx="6" cy="4" r="1" fill="white"/>
-                            <circle cx="11" cy="4" r="1" fill="white"/>
-                            <circle cx="16" cy="4" r="1" fill="white"/>
-                        </svg>
-                    </div>
-                    <h3 style="font-size: 18px; margin-bottom: 8px;">API Access & Integrations</h3>
-                    <p style="font-size: 14px; color: rgb(148, 163, 184); line-height: 1.6;">Full RESTful API with webhook support. Seamlessly connect your agents to 500+ premium services.</p>
+            <div class="f-card">
+                <div class="f-icon" style="background:linear-gradient(135deg,rgba(78,205,196,0.15),rgba(108,99,255,0.15));">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4ECDC4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm8 0a1.5 1.5 0 110-3 1.5 1.5 0 010 3z"/></svg>
                 </div>
-
-                <!-- Feature 2: Analytics -->
-                <div class="card">
-                    <div class="icon-gradient mb-4">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="4" y="12" width="4" height="10" stroke="white" stroke-width="2" fill="none"/>
-                            <rect x="12" y="6" width="4" height="16" stroke="white" stroke-width="2" fill="none"/>
-                            <rect x="20" y="10" width="4" height="12" stroke="white" stroke-width="2" fill="none"/>
-                        </svg>
-                    </div>
-                    <h3 style="font-size: 18px; margin-bottom: 8px;">Real-Time Analytics Dashboard</h3>
-                    <p style="font-size: 14px; color: rgb(148, 163, 184); line-height: 1.6;">Monitor agent performance, call volumes, latency, and integration health in real-time.</p>
+                <h3>Customer Service AI</h3>
+                <p>24/7 AI support that resolves tickets and builds customer loyalty automatically.</p>
+            </div>
+            <div class="f-card">
+                <div class="f-icon" style="background:linear-gradient(135deg,rgba(108,99,255,0.15),rgba(78,205,196,0.15));">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6C63FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M16 8v8M12 10v6M8 12v4"/></svg>
                 </div>
-
-                <!-- Feature 3: MCP Protocol -->
-                <div class="card">
-                    <div class="icon-gradient mb-4">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="8" cy="8" r="3" stroke="white" stroke-width="2" fill="none"/>
-                            <circle cx="20" cy="8" r="3" stroke="white" stroke-width="2" fill="none"/>
-                            <circle cx="14" cy="20" r="3" stroke="white" stroke-width="2" fill="none"/>
-                            <line x1="11" y1="10" x2="17" y2="10" stroke="white" stroke-width="2"/>
-                            <line x1="8" y1="11" x2="12" y2="18" stroke="white" stroke-width="2"/>
-                            <line x1="20" y1="11" x2="16" y2="18" stroke="white" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <h3 style="font-size: 18px; margin-bottom: 8px;">MCP Protocol Support</h3>
-                    <p style="font-size: 14px; color: rgb(148, 163, 184); line-height: 1.6;">Native support for Model Context Protocol. Standardized agent communication at scale.</p>
+                <h3>Inventory Intelligence</h3>
+                <p>Predict demand, automate reordering, and prevent stockouts with AI forecasting.</p>
+            </div>
+            <div class="f-card">
+                <div class="f-icon" style="background:linear-gradient(135deg,rgba(255,68,68,0.15),rgba(255,107,53,0.15));">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><polyline points="20 5 12 12 4 5"/><polyline points="20 19 12 12 4 19"/></svg>
                 </div>
-
-                <!-- Feature 4: Performance Monitoring -->
-                <div class="card">
-                    <div class="icon-gradient mb-4">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 14c0-5.5 4.5-10 10-10s10 4.5 10 10-4.5 10-10 10S4 19.5 4 14z" stroke="white" stroke-width="2" fill="none"/>
-                            <path d="M14 8v6l4 2" stroke="white" stroke-width="2" fill="none"/>
-                        </svg>
-                    </div>
-                    <h3 style="font-size: 18px; margin-bottom: 8px;">Agent Performance Monitoring</h3>
-                    <p style="font-size: 14px; color: rgb(148, 163, 184); line-height: 1.6;">Track success rates, response times, error patterns, and optimization opportunities per agent.</p>
+                <h3>Analytics Dashboard</h3>
+                <p>Real-time insights into sales, traffic, and customer behavior powered by AI.</p>
+            </div>
+            <div class="f-card">
+                <div class="f-icon" style="background:linear-gradient(135deg,rgba(255,217,61,0.15),rgba(255,107,53,0.15));">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFD93D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
                 </div>
-
-                <!-- Feature 5: Automated Scaling -->
-                <div class="card">
-                    <div class="icon-gradient mb-4">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 20h8V12H4v8zm10-8h8v8h-8v-8z" stroke="white" stroke-width="2" fill="none"/>
-                            <path d="M12 8V4m4 4V4" stroke="white" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <h3 style="font-size: 18px; margin-bottom: 8px;">Automated Scaling</h3>
-                    <p style="font-size: 14px; color: rgb(148, 163, 184); line-height: 1.6;">Auto-scale infrastructure based on demand. Handle 10x traffic spikes without configuration.</p>
+                <h3>MCP Integration Hub</h3>
+                <p>Connect 40,000+ AI tools through Model Context Protocol for unlimited automation.</p>
+            </div>
+            <div class="f-card">
+                <div class="f-icon" style="background:linear-gradient(135deg,rgba(255,107,53,0.15),rgba(78,205,196,0.15));">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
                 </div>
-
-                <!-- Feature 6: Security & Compliance -->
-                <div class="card">
-                    <div class="icon-gradient mb-4">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8 4l6-2 6 2v5c0 5-6 9-6 9s-6-4-6-9V4z" stroke="white" stroke-width="2" fill="none"/>
-                            <path d="M10 14l2 2 4-4" stroke="white" stroke-width="2" fill="none"/>
-                        </svg>
-                    </div>
-                    <h3 style="font-size: 18px; margin-bottom: 8px;">Security & Compliance</h3>
-                    <p style="font-size: 14px; color: rgb(148, 163, 184); line-height: 1.6;">SOC 2 Type II certified. HIPAA, GDPR, and data residency compliance built-in.</p>
-                </div>
+                <h3>Consumer Reach Network</h3>
+                <p>Access 40M+ consumers across partner networks and expand your market automatically.</p>
             </div>
         </div>
     </section>
 
     <!-- How It Works -->
-    <section id="how-it-works" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-rgba(124, 58, 237, 0.2)">
-        <div class="max-w-7xl mx-auto">
-            <div style="text-align: center; margin-bottom: 60px;">
-                <h2 style="font-size: 36px; margin-bottom: 16px;">How It Works</h2>
-                <p style="font-size: 16px; color: rgb(148, 163, 184);">Three simple steps to get your agents live on the marketplace.</p>
+    <section class="section" id="how-it-works">
+        <div class="section-label">How It Works</div>
+        <div class="section-title">From signup to <em>40M+ reach</em> in 4 steps</div>
+        <div class="section-desc">The complete workflow that's helping Shopify merchants scale their businesses with AI.</div>
+
+        <div class="workflow-step">
+            <div class="wf-text">
+                <div class="wf-number yellow">1</div>
+                <h3>Connect Your Store</h3>
+                <p>One-click Shopify integration. We securely sync your products, inventory, and customer data. Setup takes less than 2 minutes.</p>
             </div>
-
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32;">
-                <div>
-                    <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #2563eb, #7c3aed); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20; font-weight: 700; font-size: 20px; color: white;">1</div>
-                    <h3 style="font-size: 20px; margin-bottom: 12px;">Sign Up & Configure</h3>
-                    <p style="color: rgb(148, 163, 184); line-height: 1.6;">Create your account and connect your AI agents. API credentials are generated instantly.</p>
-                </div>
-
-                <div>
-                    <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #2563eb, #7c3aed); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20; font-weight: 700; font-size: 20px; color: white;">2</div>
-                    <h3 style="font-size: 20px; margin-bottom: 12px;">Deploy Integrations</h3>
-                    <p style="color: rgb(148, 163, 184); line-height: 1.6;">Choose from 500+ pre-built integrations or create custom connections using MCP protocol.</p>
-                </div>
-
-                <div>
-                    <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #2563eb, #7c3aed); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20; font-weight: 700; font-size: 20px; color: white;">3</div>
-                    <h3 style="font-size: 20px; margin-bottom: 12px;">Scale & Monitor</h3>
-                    <p style="color: rgb(148, 163, 184); line-height: 1.6;">Auto-scaling kicks in as demand grows. Watch real-time analytics and optimize from day one.</p>
+            <div class="wf-visual">
+                <div class="wf-visual-inner">
+                    <div class="big-icon">🔗</div>
+                    <p>Instant Shopify sync<br>No code required</p>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-rgba(124, 58, 237, 0.2)">
-        <div class="max-w-7xl mx-auto">
-            <div style="text-align: center; margin-bottom: 60px;">
-                <h2 style="font-size: 36px; margin-bottom: 16px;">Simple, Transparent Pricing</h2>
-                <p style="font-size: 16px; color: rgb(148, 163, 184);">Everything you need to scale your AI agents on one platform.</p>
+        <div class="workflow-step reverse">
+            <div class="wf-text">
+                <div class="wf-number teal">2</div>
+                <h3>Deploy AI Agents</h3>
+                <p>Choose from our marketplace of specialized agents. Customize them for your brand voice and business goals. Deploy with one click.</p>
             </div>
+            <div class="wf-visual">
+                <div class="wf-visual-inner">
+                    <div class="big-icon">🤖</div>
+                    <p>Choose your agents<br>Customize & deploy</p>
+                </div>
+            </div>
+        </div>
 
-            <div style="max-width: 500px; margin: 0 auto;">
-                <div class="card">
-                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 24px;">
-                        <div>
-                            <h3 style="font-size: 24px; margin-bottom: 8px;">All-Access Pass</h3>
-                            <p style="color: rgb(148, 163, 184); font-size: 14px;">Everything included</p>
-                        </div>
-                        <div style="text-align: right;">
-                            <div style="font-size: 36px; font-weight: 700;">$14.99</div>
-                            <div style="color: rgb(148, 163, 184); font-size: 14px;">/month</div>
-                        </div>
-                    </div>
+        <div class="workflow-step">
+            <div class="wf-text">
+                <div class="wf-number purple">3</div>
+                <h3>Automate Everything</h3>
+                <p>Agents handle marketing campaigns, customer support, inventory management, and analytics. Watch your dashboard in real-time.</p>
+            </div>
+            <div class="wf-visual">
+                <div class="wf-visual-inner">
+                    <div class="big-icon">⚙️</div>
+                    <p>AI takes over<br>You relax</p>
+                </div>
+            </div>
+        </div>
 
-                    <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid rgba(124, 58, 237, 0.2);">
-                        <div style="display: flex; gap: 12px; margin-bottom: 12px;">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.5 5.5L7.5 14.5L3.5 10.5" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span style="font-size: 14px;">API Access & 500+ Integrations</span>
-                        </div>
-                        <div style="display: flex; gap: 12px; margin-bottom: 12px;">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.5 5.5L7.5 14.5L3.5 10.5" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span style="font-size: 14px;">Real-Time Analytics Dashboard</span>
-                        </div>
-                        <div style="display: flex; gap: 12px; margin-bottom: 12px;">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.5 5.5L7.5 14.5L3.5 10.5" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span style="font-size: 14px;">MCP Protocol Support</span>
-                        </div>
-                        <div style="display: flex; gap: 12px; margin-bottom: 12px;">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.5 5.5L7.5 14.5L3.5 10.5" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span style="font-size: 14px;">Agent Performance Monitoring</span>
-                        </div>
-                        <div style="display: flex; gap: 12px; margin-bottom: 12px;">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.5 5.5L7.5 14.5L3.5 10.5" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span style="font-size: 14px;">Automated Scaling & Auto-Recovery</span>
-                        </div>
-                        <div style="display: flex; gap: 12px;">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.5 5.5L7.5 14.5L3.5 10.5" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span style="font-size: 14px;">SOC 2 & HIPAA Compliance</span>
-                        </div>
-                    </div>
-
-                    <div style="margin-bottom: 24px; padding: 16px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 12px;">
-                        <div style="display: flex; gap: 8px; margin-bottom: 8px;">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 1v8M8 12v3M1 8h6M11 8h4" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                            <span style="color: #6ee7b7; font-weight: 600; font-size: 13px;">Exclusive Launch Bonus</span>
-                        </div>
-                        <p style="color: #6ee7b7; font-size: 13px;">+ 1 Month Free Replit included with annual plan</p>
-                    </div>
-
-                    <a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="btn-primary w-full text-center">Get All-Access Pass</a>
+        <div class="workflow-step reverse">
+            <div class="wf-text">
+                <div class="wf-number pink">4</div>
+                <h3>Scale & Grow</h3>
+                <p>Watch revenue climb while AI handles everything. Access 40M+ consumers through our network. Scale without hiring.</p>
+            </div>
+            <div class="wf-visual">
+                <div class="wf-visual-inner">
+                    <div class="big-icon">📈</div>
+                    <p>Revenue growth<br>AI-powered scaling</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="py-24 px-4 sm:px-6 lg:px-8 border-t border-rgba(124, 58, 237, 0.2)">
-        <div class="max-w-7xl mx-auto">
-            <div style="text-align: center; margin-bottom: 60px;">
-                <h2 style="font-size: 36px; margin-bottom: 16px;">What Teams Are Saying</h2>
-                <p style="font-size: 16px; color: rgb(148, 163, 184);">Join thousands of teams scaling their AI agents worldwide.</p>
-            </div>
+    <section class="section" id="testimonials">
+        <div class="testimonials-header">
+            <div class="section-label">Testimonials</div>
+            <div class="section-title" style="margin: 0 auto 16px; text-align: center;">Don't take our word for it. <em>Hear from merchants.</em></div>
+        </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24;">
-                <div class="card">
-                    <div style="margin-bottom: 16px;">
-                        <span style="color: #fbbf24;">★★★★★</span>
-                    </div>
-                    <p style="margin-bottom: 16px; line-height: 1.6; color: rgb(226, 232, 240);">"ShopifySuperHero transformed how we manage agent integrations. Our deployment time dropped from days to hours."</p>
-                    <div style="display: flex; align-items: center; gap: 12px;">
-                        <div style="width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #60a5fa, #a78bfa);"></div>
-                        <div>
-                            <div style="font-weight: 600; font-size: 14px;">Sarah Chen</div>
-                            <div style="color: rgb(148, 163, 184); font-size: 13px;">VP Engineering, CloudScale AI</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div style="margin-bottom: 16px;">
-                        <span style="color: #fbbf24;">★★★★★</span>
-                    </div>
-                    <p style="margin-bottom: 16px; line-height: 1.6; color: rgb(226, 232, 240);">"The real-time analytics gave us insights we never had before. We increased agent performance by 35% in month one."</p>
-                    <div style="display: flex; align-items: center; gap: 12px;">
-                        <div style="width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #a78bfa, #fbbf24);"></div>
-                        <div>
-                            <div style="font-weight: 600; font-size: 14px;">Marcus Rodriguez</div>
-                            <div style="color: rgb(148, 163, 184); font-size: 13px;">Co-founder, AgentWorks</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div style="margin-bottom: 16px;">
-                        <span style="color: #fbbf24;">★★★★★</span>
-                    </div>
-                    <p style="margin-bottom: 16px; line-height: 1.6; color: rgb(226, 232, 240);">"Compliance and security were critical for us. ShopifySuperHero's SOC 2 certification and HIPAA support saved us months of work."</p>
-                    <div style="display: flex; align-items: center; gap: 12px;">
-                        <div style="width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #fbbf24, #60a5fa);"></div>
-                        <div>
-                            <div style="font-weight: 600; font-size: 14px;">Dr. Priya Patel</div>
-                            <div style="color: rgb(148, 163, 184); font-size: 13px;">Head of Compliance, HealthBridge AI</div>
-                        </div>
+        <div class="test-grid">
+            <div class="t-card">
+                <div class="t-stars">★★★★★</div>
+                <p class="t-quote">"Revenue jumped 47% in the first month. The AI handled my marketing while I focused on product. This is a game-changer for small shops."</p>
+                <div class="t-author">
+                    <div class="t-avatar" style="background: var(--teal); color: var(--black);">SC</div>
+                    <div class="t-info">
+                        <h4>Sarah Chen</h4>
+                        <span>Apparel Shop Owner</span>
                     </div>
                 </div>
             </div>
+            <div class="t-card">
+                <div class="t-stars">★★★★★</div>
+                <p class="t-quote">"The customer service AI handles 80% of my support tickets. I went from overwhelmed to actually having time to scale. Incredible value."</p>
+                <div class="t-author">
+                    <div class="t-avatar" style="background: var(--purple); color: var(--black);">MK</div>
+                    <div class="t-info">
+                        <h4>Marcus Kelly</h4>
+                        <span>Beauty Products Seller</span>
+                    </div>
+                </div>
+            </div>
+            <div class="t-card">
+                <div class="t-stars">★★★★★</div>
+                <p class="t-quote">"Never overstocked again. The inventory AI predicts demand perfectly. Plus reaching 40M consumers? My business changed overnight."</p>
+                <div class="t-author">
+                    <div class="t-avatar" style="background: var(--pink); color: var(--black);">JP</div>
+                    <div class="t-info">
+                        <h4>Jessica Patel</h4>
+                        <span>Craft Supplies Store</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section pricing-center" id="pricing">
+        <div class="section-label">Pricing</div>
+        <div class="section-title" style="margin: 0 auto 16px; text-align: center;">One plan. <em>Everything included.</em></div>
+        <p class="section-desc" style="margin: 0 auto 0; text-align: center;">Complete AI automation for your Shopify store. No tiers, no hidden fees.</p>
+
+        <div class="price-card">
+            <div class="price-badge">Most Popular</div>
+            <h3 style="font-size: 1.4rem; font-weight: 700;">Shopify SuperHero Plan</h3>
+            <div class="price-amount">$14.99</div>
+            <div class="price-period">per month · cancel anytime</div>
+
+            <ul class="price-features">
+                <li>6 AI Agent Types (Marketing, Support, Inventory, Analytics, MCP, Consumer Reach)</li>
+                <li>One-click Shopify integration</li>
+                <li>40,000+ AI tool integrations via MCP</li>
+                <li>40M+ consumer network access</li>
+                <li>Real-time analytics dashboard</li>
+                <li>24/7 customer service AI</li>
+                <li>Priority support</li>
+            </ul>
+
+            <a href="https://buy.stripe.com/test_cNa28H2Yp4d50XS3cz" class="btn-cta btn-cta-accent price-cta" style="display: block; text-align: center;">Get Started for $14.99/mo →</a>
+            <p class="price-note">14-day free trial · No credit card required · Cancel anytime</p>
+        </div>
+    </section>
+
+    <!-- Ai-Ai Referral -->
+    <section class="section" style="padding-bottom: 40px;">
+        <div class="referral">
+            <div class="ref-badge">Ai-Ai Referral Program</div>
+            <h2 class="ref-title">Earn <em>80% Ai-Ai Commission</em></h2>
+            <p style="font-size:0.7rem;color:var(--gray);margin-bottom:24px;">First Payment</p>
+            <p class="ref-desc">You send your referral code to the world, and watch the money flow. No caps. No approval process. Just share with your network or set Ai-Ai to automatically promote. 80% of every first payment — unlimited.</p>
+
+            <div class="ref-stats">
+                <div class="ref-stat">
+                    <div class="ref-stat-val">80%</div>
+                    <div class="ref-stat-label">Commission Rate <span style="font-size:0.65rem;display:block;color:var(--gray);">First Payment</span></div>
+                </div>
+                <div class="ref-stat">
+                    <div class="ref-stat-val">$11.99</div>
+                    <div class="ref-stat-label">Per Referral Earned</div>
+                </div>
+                <div class="ref-stat">
+                    <div class="ref-stat-val">∞</div>
+                    <div class="ref-stat-label">Unlimited · No Caps</div>
+                </div>
+            </div>
+
+            <a href="#pricing" class="btn-cta btn-cta-accent">Join Ai-Ai Program →</a>
+            <p style="font-size:0.78rem;color:var(--gray);margin-top:16px;">No approval process · Instant setup · Share anywhere</p>
         </div>
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-rgba(124, 58, 237, 0.2)">
-        <div class="max-w-4xl mx-auto">
-            <div style="text-align: center; margin-bottom: 60px;">
-                <h2 style="font-size: 36px; margin-bottom: 16px;">Frequently Asked Questions</h2>
-                <p style="font-size: 16px; color: rgb(148, 163, 184);">Have questions? We have answers.</p>
+    <section class="section" id="faq">
+        <div style="text-align: center; margin-bottom: 48px;">
+            <div class="section-label">FAQ</div>
+            <div class="section-title" style="margin: 0 auto 16px; text-align: center;">Got questions? <em>We've got answers.</em></div>
+        </div>
+
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    <span>How does Shopify SuperHero work with my existing Shopify store?</span>
+                    <span class="arrow">▾</span>
+                </div>
+                <div class="faq-a"><div class="faq-a-inner">We integrate directly with Shopify's API. Connect your store with one click, and we sync your products, inventory, orders, and customer data in real-time. No coding required, no data loss, no downtime.</div></div>
             </div>
-
-            <div style="display: flex; flex-direction: column; gap: 12px;">
-                <div class="faq-item">
-                    <button class="accordion-button" onclick="toggleAccordion(this)">
-                        <span>What payment methods do you accept?</span>
-                        <span>+</span>
-                    </button>
-                    <div class="accordion-content">
-                        <p style="color: rgb(226, 232, 240); line-height: 1.6;">We accept all major credit cards (Visa, Mastercard, American Express) through Stripe. All billing is billed monthly, and you can cancel anytime.</p>
-                    </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    <span>What AI agents can I deploy?</span>
+                    <span class="arrow">▾</span>
                 </div>
-
-                <div class="faq-item">
-                    <button class="accordion-button" onclick="toggleAccordion(this)">
-                        <span>Can I integrate with existing tools?</span>
-                        <span>+</span>
-                    </button>
-                    <div class="accordion-content">
-                        <p style="color: rgb(226, 232, 240); line-height: 1.6;">Yes! We offer 500+ pre-built integrations and full API access for custom connections. MCP Protocol support means you can connect virtually any AI agent framework.</p>
-                    </div>
+                <div class="faq-a"><div class="faq-a-inner">Six specialized agents come with your plan: Marketing Agents (write and post campaigns), Customer Service AI (handle tickets 24/7), Inventory Intelligence (predict demand), Analytics Dashboard (real-time insights), MCP Integration Hub (connect 40,000+ tools), and Consumer Reach Network (access 40M+ customers).</div></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    <span>How much can I realistically increase my revenue?</span>
+                    <span class="arrow">▾</span>
                 </div>
-
-                <div class="faq-item">
-                    <button class="accordion-button" onclick="toggleAccordion(this)">
-                        <span>Is there a setup fee?</span>
-                        <span>+</span>
-                    </button>
-                    <div class="accordion-content">
-                        <p style="color: rgb(226, 232, 240); line-height: 1.6;">No setup fees. Just $14.99/month and you're live. You can start for as little as a single agent and scale up as you grow.</p>
-                    </div>
+                <div class="faq-a"><div class="faq-a-inner">Results vary based on your store size and product type. Our merchants see an average of 30-50% revenue growth in the first 6 months through improved marketing, reduced customer service overhead, and better inventory management. Some have reached 100%+ growth through the consumer reach network.</div></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    <span>Is there a free trial?</span>
+                    <span class="arrow">▾</span>
                 </div>
-
-                <div class="faq-item">
-                    <button class="accordion-button" onclick="toggleAccordion(this)">
-                        <span>What about data residency and compliance?</span>
-                        <span>+</span>
-                    </button>
-                    <div class="accordion-content">
-                        <p style="color: rgb(226, 232, 240); line-height: 1.6;">We're SOC 2 Type II certified and offer HIPAA, GDPR, and data residency compliance. You control where your data is stored and processed.</p>
-                    </div>
+                <div class="faq-a"><div class="faq-a-inner">Yes! We offer a 14-day free trial for all new users. Get full access to every AI agent, the dashboard, and integrations. No credit card required. Cancel anytime.</div></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    <span>How does the Ai-Ai referral program work?</span>
+                    <span class="arrow">▾</span>
                 </div>
-
-                <div class="faq-item">
-                    <button class="accordion-button" onclick="toggleAccordion(this)">
-                        <span>How does support work?</span>
-                        <span>+</span>
-                    </button>
-                    <div class="accordion-content">
-                        <p style="color: rgb(226, 232, 240); line-height: 1.6;">All plans include email support. Priority support with dedicated Slack channel is available on higher tiers. Average response time: under 2 hours.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="accordion-button" onclick="toggleAccordion(this)">
-                        <span>Can I cancel anytime?</span>
-                        <span>+</span>
-                    </button>
-                    <div class="accordion-content">
-                        <p style="color: rgb(226, 232, 240); line-height: 1.6;">Yes, absolutely. Cancel anytime from your account dashboard. No contracts, no long-term commitments. Your data remains accessible for 30 days.</p>
-                    </div>
-                </div>
+                <div class="faq-a"><div class="faq-a-inner">Share your unique referral code with other Shopify store owners. When they sign up and make their first payment ($14.99), you earn 80% of that ($11.99). There's no cap — refer as many people as you want and earn unlimited commissions. No approval process, instant setup.</div></div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Footer -->
-    <section class="py-24 px-4 sm:px-6 lg:px-8 border-t border-rgba(124, 58, 237, 0.2) text-center">
-        <div class="max-w-4xl mx-auto">
-            <h2 style="font-size: 36px; margin-bottom: 20px;">Ready to Scale Your AI Agents?</h2>
-            <p style="font-size: 16px; color: rgb(148, 163, 184); margin-bottom: 32px;">Join 8,500+ active agents discovering premium services on ShopifySuperHero.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="btn-primary">Get All-Access Pass for $14.99/mo →</a>
-                <button class="btn-secondary">+ 1 Month Free Replit</button>
-            </div>
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <h2>Ready to let <em>AI run your store?</em></h2>
+        <p>Join 8,000+ Shopify merchants already automating their business with Shopify SuperHero.</p>
+        <div class="final-cta-btns">
+            <a href="https://buy.stripe.com/test_cNa28H2Yp4d50XS3cz" class="btn-cta btn-cta-accent">Get Started for $14.99/mo →</a>
+            <a href="#features" class="btn-outline">Explore Features</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer style="border-top: 1px solid rgba(148, 163, 184, 0.1); padding: 40px 20px; color: rgb(148, 163, 184); font-size: 14px;">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-4 gap-8 mb-12">
-            <div>
-                <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: rgb(226, 232, 240); margin-bottom: 16px;">ShopifySuperHero</div>
-                <p style="line-height: 1.6;">AI Agent Marketplace Platform. Discover premium services at scale.</p>
-            </div>
-            <div>
-                <div style="font-weight: 600; color: rgb(226, 232, 240); margin-bottom: 12px;">Product</div>
-                <div style="display: flex; flex-direction: column; gap: 8px;">
-                    <a href="#features" style="text-decoration: none; color: rgb(148, 163, 184); transition: color 0.3s;">Features</a>
-                    <a href="#pricing" style="text-decoration: none; color: rgb(148, 163, 184); transition: color 0.3s;">Pricing</a>
-                    <a href="#how-it-works" style="text-decoration: none; color: rgb(148, 163, 184); transition: color 0.3s;">How It Works</a>
-                </div>
-            </div>
-            <div>
-                <div style="font-weight: 600; color: rgb(226, 232, 240); margin-bottom: 12px;">Company</div>
-                <div style="display: flex; flex-direction: column; gap: 8px;">
-                    <a href="#" style="text-decoration: none; color: rgb(148, 163, 184);">Blog</a>
-                    <a href="#" style="text-decoration: none; color: rgb(148, 163, 184);">Status</a>
-                    <a href="#" style="text-decoration: none; color: rgb(148, 163, 184);">Privacy</a>
-                </div>
-            </div>
-            <div>
-                <div style="font-weight: 600; color: rgb(226, 232, 240); margin-bottom: 12px;">Connect</div>
-                <div style="display: flex; flex-direction: column; gap: 8px;">
-                    <a href="#" style="text-decoration: none; color: rgb(148, 163, 184);">Twitter</a>
-                    <a href="#" style="text-decoration: none; color: rgb(148, 163, 184);">GitHub</a>
-                    <a href="#" style="text-decoration: none; color: rgb(148, 163, 184);">Discord</a>
-                </div>
-            </div>
-        </div>
-        <div style="border-top: 1px solid rgba(148, 163, 184, 0.1); padding-top: 20px; text-align: center;">
-            <p>&copy; 2026 ShopifySuperHero. All rights reserved.</p>
-        </div>
+    <footer>
+        <p>&copy; 2026 Shopify SuperHero. All rights reserved.</p>
+        <p><a href="https://shopifysuperhero.com">shopifysuperhero.com</a> · <a href="#pricing">Pricing</a> · <a href="#faq">FAQ</a> · <a href="#">Privacy</a></p>
     </footer>
 
+    <!-- Sticky Bottom CTA -->
+    <div class="sticky-cta">
+        <p>⚡ Automate your Shopify store with AI agents</p>
+        <a href="https://buy.stripe.com/test_cNa28H2Yp4d50XS3cz" class="btn-cta btn-cta-accent">Get Started for $14.99/mo →</a>
+    </div>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2C3KN7T"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
     <script>
-        function toggleAccordion(button) {
-            const content = button.nextElementSibling;
-            const isActive = button.classList.contains('active');
-
-            // Close all other items
-            document.querySelectorAll('.accordion-button.active').forEach(btn => {
-                if (btn !== button) {
-                    btn.classList.remove('active');
-                    btn.nextElementSibling.classList.remove('active');
-                }
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-q').forEach(q => {
+            q.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
             });
+        });
 
-            // Toggle current item
-            button.classList.toggle('active');
-            content.classList.toggle('active');
-
-            // Update icon
-            const icon = button.querySelector('span:last-child');
-            icon.textContent = isActive ? '+' : '−';
-        }
+        // Sticky CTA visibility
+        window.addEventListener('scroll', function() {
+            const hero = document.querySelector('.hero');
+            const sticky = document.querySelector('.sticky-cta');
+            const heroBottom = hero.offsetTop + hero.offsetHeight;
+            if (window.scrollY > heroBottom) {
+                document.body.classList.add('sticky-visible');
+            } else {
+                document.body.classList.remove('sticky-visible');
+            }
+        });
     </script>
+
 </body>
 </html>
